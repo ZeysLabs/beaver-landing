@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy — Beaver</title>
+  <link rel="canonical" href="https://b3aver.com/privacy">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root { color-scheme: light dark; }
+    body { max-width: 68ch; margin: 0 auto; padding: 2rem 1.25rem; background: #f5f1ea; color: #1f1d1a; font: 1rem/1.65 system-ui, sans-serif; }
+    h1, h2 { font-family: Georgia, serif; line-height: 1.2; }
+    a { color: inherit; }
+    @media (prefers-color-scheme: dark) { body { background: #1f1d1a; color: #f5f1ea; } }
+  </style>
+</head>
+<body>
+  <header><a href="/">← Beaver</a></header>
+  <main>
+    <h1>Privacy</h1>
+    <p>Last updated: 2026-10-08</p>
+    <p>ZeysLabs (“we”) provides Beaver, a project planning service. This page explains what information is used to provide it.</p>
+
+    <h2>Information we handle</h2>
+    <p>When you create an account, Supabase Auth handles your email and password or sign-in through Google or GitHub. Project information you add, including prompts and plan content, is stored in Supabase (PostgreSQL with row-level security). Uploaded files are stored in Supabase Storage.</p>
+    <p>If you use plan generation, your prompt and the plan content needed to generate a result are sent through OpenRouter to the language model providers it routes requests to.</p>
+    <p>Payments are handled by Polar, our merchant of record. Card details are collected by Polar and do not come to Beaver. Our application is hosted on Vercel.</p>
+
+    <h2>How we use information</h2>
+    <p>We use this information to provide account access, save and display your projects and files, generate plans when requested, and manage subscriptions.</p>
+
+    <h2>Third-party services</h2>
+    <p>Supabase provides authentication, database, and file storage; OpenRouter routes AI requests to language model providers; Polar handles payments; and Vercel hosts the application. Their handling of information is subject to their own terms and privacy practices.</p>
+
+    <h2>Your choices</h2>
+    <p>You can cancel a paid plan at any time. To ask a question about your information or request deletion, contact us at <a href="mailto:contact@zeyslabs.com">contact@zeyslabs.com</a>.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this page? Email <a href="mailto:contact@zeyslabs.com">contact@zeyslabs.com</a>.</p>
+  </main>
+  <footer><p>© 2026 ZeysLabs</p></footer>
+</body>
+</html>
