@@ -298,7 +298,7 @@
         if (entry.isIntersecting && !started) { started = true; play(); }
         else if (!entry.isIntersecting && state === 'playing') pause();
       });
-    }, { threshold: 0.35 });
+    }, { threshold: 0.15 });
     reset();
     io.observe(demo);
   } else {
