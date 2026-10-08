@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beaver — Describe a project. Get a structured plan in 30 seconds.</title>
+<meta name="description" content="Beaver is an AI project-management tool. Describe a project in one sentence; the AI Project Architect builds a four-level plan, and a four-role Plan Council explains why each part is there.">
+<link rel="canonical" href="https://b3aver.com/">
+<meta name="theme-color" content="#f2ede4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171512" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beaver">
+<meta property="og:url" content="https://b3aver.com/">
+<meta property="og:title" content="Beaver — Describe a project. Get a structured plan in 30 seconds.">
+<meta property="og:description" content="One prompt becomes a Project › Structure › Section › Task plan. Four AI roles then review it and leave their reasoning on the items they explain.">
+<meta property="og:image" content="https://b3aver.com/assets/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="One sentence in, four levels out: a prompt branching into project, structures, sections and tasks.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Beaver — Describe a project. Get a structured plan in 30 seconds.">
+<meta name="twitter:description" content="One prompt becomes a four-level plan. Four AI roles review it and leave the reasoning on the work itself.">
+<meta name="twitter:image" content="https://b3aver.com/assets/og.png">
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.replace('no-js','js')</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Beaver",
+  "url": "https://b3aver.com/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "AI project-management tool. One prompt becomes a four-level plan (Project, Structure, Section, Task), reviewed by a four-role Plan Council that attaches its reasoning to each item.",
+  "publisher": { "@type": "Organization", "name": "ZeysLabs", "email": "contact@zeyslabs.com" },
+  "offers": [
+    { "@type": "Offer", "name": "Starter", "price": "0", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Pro (monthly, launch price)", "price": "10", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Business (monthly, launch price)", "price": "20", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Enterprise (monthly, launch price)", "price": "80", "priceCurrency": "USD" }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="/" aria-label="Beaver home">
+      <img src="assets/beaver-mark.png" width="28" height="28" alt="">
+      <span>Beaver</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="menu-btn__label">Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="link-quiet" href="https://app.b3aver.com/login">Sign in</a>
+        <a class="btn btn--primary" href="https://app.b3aver.com/login?tab=signup">Start free</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero__copy">
+      <p class="label">Beaver · AI project management</p>
+      <h1 id="hero-title" class="display">Describe a project.<br><span class="display__quiet">Get a structured plan in 30&nbsp;seconds.</span></h1>
+      <p class="lede">Beaver’s AI Project Architect turns one sentence into a four-level plan — then a council of four AI roles explains, on each item, why it is there.</p>
+      <div class="cta-row">
+        <a class="btn btn--primary btn--lg" href="https://app.b3aver.com/login?tab=signup">Start free</a>
+        <a class="btn btn--ghost btn--lg" href="#how">See how it works</a>
+      </div>
+      <p class="fine">Starter plan is free. AI generation is included from Pro.</p>
+    </div>
+
+    <figure class="plate reg hero__plate" aria-labelledby="demo-cap">
+      <div class="plate__head">
+        <span class="label">Fig. I</span>
+        <span class="label">Illustration</span>
+      </div>
+
+      <div class="demo" id="demo">
+        <div class="demo__prompt">
+          <span class="label label--tight">Prompt</span>
+          <p class="demo__prompt-text"><span id="demo-typed">Launch a mobile banking app in 3 months</span><span class="caret" aria-hidden="true"></span></p>
+        </div>
+
+        <ol class="tree" id="demo-tree">
+          <li class="row" data-level="project" style="--d:0"><span class="tag">Project</span><span class="t">Mobile banking app</span></li>
+          <li class="row" data-level="structure" style="--d:1"><span class="tag">Structure</span><span class="t">Product &amp; compliance</span></li>
+          <li class="row" data-level="section" style="--d:2"><span class="tag">Section</span><span class="t">Onboarding &amp; KYC</span></li>
+          <li class="row" data-level="task" style="--d:3"><span class="tag">Task</span><span class="t">Identity verification flow</span></li>
+          <li class="row" data-level="task" style="--d:3"><span class="tag">Task</span><span class="t">Consent &amp; terms screens</span></li>
+          <li class="row" data-level="section" style="--d:2"><span class="tag">Section</span><span class="t">Licensing review</span></li>
+          <li class="row row--annotated" data-level="structure" style="--d:1">
+            <span class="tag">Structure</span><span class="t">Engineering</span>
+            <span class="leader" aria-hidden="true"></span>
+            <span class="why" id="demo-why"><span class="why__dot" aria-hidden="true"></span>Why is this here?</span>
+          </li>
+          <li class="note-row" id="demo-note" style="--d:1">
+            <div class="note">
+              <span class="note__role">IV · Judge</span>
+              <span class="note__text">Split into three sections because ledger, cards and the app go through separate reviews — one slipping shouldn’t hold the others.</span>
+            </div>
+          </li>
+          <li class="row" data-level="section" style="--d:2"><span class="tag">Section</span><span class="t">Core ledger</span></li>
+          <li class="row" data-level="section" style="--d:2"><span class="tag">Section</span><span class="t">Card issuing</span></li>
+          <li class="row" data-level="section" style="--d:2"><span class="tag">Section</span><span class="t">Mobile client</span></li>
+          <li class="row" data-level="task" style="--d:3"><span class="tag">Task</span><span class="t">Account overview screen</span></li>
+          <li class="row" data-level="structure" style="--d:1"><span class="tag">Structure</span><span class="t">Launch</span></li>
+          <li class="row" data-level="section" style="--d:2"><span class="tag">Section</span><span class="t">Closed beta</span></li>
+        </ol>
+      </div>
+
+      <div class="plate__foot">
+        <figcaption id="demo-cap" class="label">Simplified illustration of a generated plan — not live output</figcaption>
+        <button class="demo-ctl" id="demo-ctl" type="button" hidden>Pause</button>
+      </div>
+    </figure>
+  </section>
+
+  <!-- HOW -->
+  <section id="how" class="section wrap" aria-labelledby="how-title">
+    <header class="section__head">
+      <span class="label">§ 01</span>
+      <h2 id="how-title" class="h2">How it works</h2>
+      <span class="label section__plate">Plate I / IV</span>
+    </header>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="label">01 / Describe</span>
+        <h3 class="h3">Write one sentence.</h3>
+        <p>Say what you want to deliver and by when — “Launch a mobile banking app in 3 months.” No template to pick, no form to fill.</p>
+      </li>
+      <li class="step">
+        <span class="label">02 / Architect</span>
+        <h3 class="h3">The hierarchy is built.</h3>
+        <p>The AI Project Architect lays out the whole plan in four levels: <span class="path">Project › Structure › Section › Task</span>, with descriptions on each item.</p>
+      </li>
+      <li class="step">
+        <span class="label">03 / Council</span>
+        <h3 class="h3">The plan is reviewed.</h3>
+        <p>Four AI roles read the plan in order and attach their findings to the items they concern. You see them inline as <span class="why why--inline">Why is this here?</span></p>
+      </li>
+    </ol>
+
+    <p class="after-note"><span class="label">Then</span> It is yours. Rename, move, delete or add anything on a drag-and-drop kanban — nothing the AI built is locked.</p>
+  </section>
+
+  <!-- COUNCIL -->
+  <section id="council" class="section wrap" aria-labelledby="council-title">
+    <header class="section__head">
+      <span class="label">§ 02</span>
+      <h2 class="h2 visually-hidden">The Plan Council</h2>
+      <span class="label section__plate">Plate II / IV</span>
+    </header>
+
+    <div class="council plate reg">
+      <div class="plate__head">
+        <span class="label">Fig. II</span>
+        <span class="label">Deliberation</span>
+      </div>
+
+      <div class="council__grid">
+        <div class="council__copy">
+          <p class="label">The Plan Council</p>
+          <p id="council-title" class="display display--md">The reasoning lives next to the work.</p>
+          <p>Most AI tools hand you an answer and forget why. Beaver keeps the why. Each finding is attached to the item it explains, so six months later the answer to <em>“why was this section split in three?”</em> lives on the section itself.</p>
+        </div>
+
+        <ol class="roles" aria-label="Council roles, in the order they review">
+          <li class="role">
+            <span class="role__n">I</span>
+            <span class="role__name">Advocate</span>
+            <span class="role__line">Explains what each part is for, and what would be missing without it.</span>
+          </li>
+          <li class="role">
+            <span class="role__n">II</span>
+            <span class="role__name">Challenger</span>
+            <span class="role__line">Looks for overlap, wrong ordering and work the plan quietly skips.</span>
+          </li>
+          <li class="role">
+            <span class="role__n">III</span>
+            <span class="role__name">Expert</span>
+            <span class="role__line">Weighs effort and sequence, and flags what sits on the critical path.</span>
+          </li>
+          <li class="role role--judge">
+            <span class="role__n">IV</span>
+            <span class="role__name">Judge</span>
+            <span class="role__line">Settles disagreements in one sentence — the verdict you read later.</span>
+          </li>
+        </ol>
+      </div>
+
+      <p class="council__honest"><span class="label">Note</span> The council never rewrites your plan; it justifies it. If one of the roles fails, you still get the full plan — just with fewer annotations.</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section wrap" aria-labelledby="features-title">
+    <header class="section__head">
+      <span class="label">§ 03</span>
+      <h2 id="features-title" class="h2">Features</h2>
+      <span class="label section__plate">Plate III / IV</span>
+    </header>
+
+    <ul class="features">
+      <li class="feature">
+        <span class="label">01</span>
+        <h3 class="h3">Hierarchical kanban</h3>
+        <p>Four levels, drag and drop at every level. Statuses: To-Do, Working On, Done, Revise.</p>
+      </li>
+      <li class="feature">
+        <span class="label">02</span>
+        <h3 class="h3">Chat on every item</h3>
+        <p>A realtime thread per project, structure, section or task, with file and image sharing. Business plan and up.</p>
+      </li>
+      <li class="feature">
+        <span class="label">03</span>
+        <h3 class="h3">Calendar &amp; notifications</h3>
+        <p>Switch the board to a month calendar of dated items. In-app notifications collect under the bell in the header.</p>
+      </li>
+      <li class="feature">
+        <span class="label">04</span>
+        <h3 class="h3">Files, images &amp; markdown</h3>
+        <p>Attach files and images and write descriptions in markdown. Paid plans; Pro allows 25&nbsp;MB per file.</p>
+      </li>
+      <li class="feature">
+        <span class="label">05</span>
+        <h3 class="h3">Per-item access</h3>
+        <p>Share only the items someone is assigned to, by email. They see those items and nothing else.</p>
+      </li>
+      <li class="feature">
+        <span class="label">06</span>
+        <h3 class="h3">Seven languages, two themes</h3>
+        <p>English, Türkçe, Deutsch, Español, Français, Русский and 中文 — in light or dark.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section wrap" aria-labelledby="pricing-title">
+    <header class="section__head">
+      <span class="label">§ 04</span>
+      <h2 id="pricing-title" class="h2">Pricing</h2>
+      <span class="label section__plate">Plate IV / IV</span>
+    </header>
+
+    <div class="pricing-bar">
+      <p class="pricing-bar__note"><span class="label label--accent">Launch pricing</span> Early prices, shown next to the regular price they will return to.</p>
+      <div class="toggle" role="group" aria-label="Billing period">
+        <button type="button" class="toggle__btn" data-period="monthly" aria-pressed="true">Monthly</button>
+        <button type="button" class="toggle__btn" data-period="yearly" aria-pressed="false">Yearly</button>
+      </div>
+    </div>
+
+    <div class="plans" id="plans" aria-live="polite">
+      <noscript>
+        <p class="noscript">Starter $0 · Pro $10/month (regular $15) · Business $20/month (regular $30) · Enterprise $80/month (regular $120). Yearly: Pro $90, Business $180, Enterprise $720. <a href="https://app.b3aver.com/login?tab=signup">Start free</a></p>
+      </noscript>
+    </div>
+
+    <p class="fine pricing-foot">Prices in USD. Payments via Polar.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section wrap" aria-labelledby="faq-title">
+    <header class="section__head">
+      <span class="label">§ 05</span>
+      <h2 id="faq-title" class="h2">Questions</h2>
+      <span class="label section__plate">Appendix</span>
+    </header>
+
+    <div class="faq">
+      <details>
+        <summary>Is there a free plan?</summary>
+        <p>Yes. Starter is free: one user, two projects and the full kanban. AI generation and file uploads are not included on Starter.</p>
+      </details>
+      <details>
+        <summary>How does AI generation work, and what counts as one generation?</summary>
+        <p>You write one prompt. The AI Project Architect builds the full plan, then the Plan Council reviews it and attaches its findings. That whole run — one prompt, one complete reviewed plan — counts as one generation. Pro includes 10 per month, Business 20, Enterprise 100.</p>
+      </details>
+      <details>
+        <summary>Can I edit what the AI builds?</summary>
+        <p>Yes, everything. Generated items are ordinary items: rename, move, delete or add to them like anything you created yourself.</p>
+      </details>
+      <details>
+        <summary>Who can see my projects?</summary>
+        <p>Only you and the people you invite. Access is granted per item, by email — someone assigned to one task sees that task and the path to it, nothing else. Data is stored on Supabase with row-level security.</p>
+      </details>
+      <details>
+        <summary>Can I export my data or use an API?</summary>
+        <p>Not yet — it’s on our roadmap.</p>
+      </details>
+      <details>
+        <summary>How can I pay?</summary>
+        <p>By card, through Polar, our payment provider. We never see or store your card details.</p>
+      </details>
+      <details>
+        <summary>Can I cancel?</summary>
+        <p>Yes, anytime, from settings.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final wrap" aria-labelledby="final-title">
+    <div class="plate reg final__plate">
+      <p id="final-title" class="display display--md">One sentence in.<br><span class="display__quiet">Four levels out.</span></p>
+      <div class="cta-row">
+        <a class="btn btn--primary btn--lg" href="https://app.b3aver.com/login?tab=signup">Start free</a>
+        <a class="btn btn--ghost btn--lg" href="https://app.b3aver.com/login">Sign in</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <span class="brand brand--static"><img src="assets/beaver-mark.png" width="22" height="22" alt=""><span>Beaver</span></span>
+      <p class="label">Built by ZeysLabs</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="mailto:contact@zeyslabs.com">contact@zeyslabs.com</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+    </ul>
+    <p class="label footer-copy">© 2026 ZeysLabs</p>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
